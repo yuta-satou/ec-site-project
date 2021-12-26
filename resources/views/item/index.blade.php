@@ -8,6 +8,14 @@
 
 @section('content')
 <div class="container">
-    <h1>index</h1>
+    <div class="row">
+        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
+        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
+        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
+        {{-- <div class="col-md-6 border border-dark">6</div> --}}
+    </div>
+    <h1>TOP画面</h1>
+    <a href="{{ route('create') }}">商品新規登録画面</a>
+
 </div>
 @endsection
