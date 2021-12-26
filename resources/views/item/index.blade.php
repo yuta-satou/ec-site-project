@@ -18,36 +18,10 @@
     <a href="{{ route('create') }}">商品新規登録画面</a>
 
 </div> --}}
-<section class="header-top-section">
-	<div class="container">
-        <div class="row">
-            <div  class="col-md-6">
-                <div class="header-top-content">
-                    <ul class="nav nav-pills navbar-left">
-                        <li><a href="#"><i class="pe-7s-call"></i><span>STORE TOP</span></a></li>
-                        <li><a href=""><i class="pe-7s-call"></i><span>123-123456789</span></a></li>
-                        <li><a href=""><i class="pe-7s-mail"></i><span> info@mart.com</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div  class="col-md-6">
-                <div class="header-top-menu">
-                    <ul class="nav nav-pills navbar-right">
-                        <li><a href='#'>My Account</a></li>
-                        <li><a href="#">Cart</a></li>
-
-                        <li><a href="#"><i class="pe-7s-lock"></i>Login/Register</a></li>
-                        <li><a href="#">Manage</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <header class="header-section">
     <nav class="navbar navbar-default">
-        <div class="container">
+        {{-- <div class="container"> --}}
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -71,7 +45,7 @@
                 <li><a href="#"><span> Cart -$0&nbsp;</span> <span class="shoping-cart">0</span></a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
+        {{-- </div><!-- /.container --> --}}
     </nav>
 </header>
 
@@ -284,20 +258,9 @@
 </div>
 
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="center">Made with <i class="fa fa-heart"></i> by <a href="https://revolthemes.net/" target="_blank">Revolthemes</a>. All Rights Reserved</p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-		<!-- common js -->
-		<!-- <script src=""></script> -->
-		<script src="js/top.js "></script>
+<!-- common js -->
+<!-- <script src=""></script> -->
+<script src="js/top.js "></script>
 
 
 @endsection
