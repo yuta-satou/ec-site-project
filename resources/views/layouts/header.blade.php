@@ -15,7 +15,6 @@
                     <ul class="nav nav-pills navbar-right">
                         <li><a href='#'>My Account</a></li>
                         <li><a href="#">Cart</a></li>
-
                         @guest
                             <li>
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

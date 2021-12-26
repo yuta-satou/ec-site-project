@@ -7,18 +7,6 @@
 
 
 @section('content')
-{{-- <div class="container">
-    <div class="row">
-        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
-        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
-        <div class="col-md-3 col-md-push-1 border border-dark">4</div>
-        <div class="col-md-6 border border-dark">6</div>
-    </div>
-    <h1>TOP画面</h1>
-    <a href="{{ route('create') }}">商品新規登録画面</a>
-
-</div> --}}
-
 <header class="header-section">
     <nav class="navbar navbar-default">
         {{-- <div class="container"> --}}
@@ -38,7 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
                     <!-- <li><a href="#">page</a></li> -->
-                    <li><a href="#">shop</a></li>
+                    <li><a href="{{ route('create') }}">shop</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right cart-menu">
                 <li><a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
@@ -260,7 +248,7 @@
 
 <!-- common js -->
 <!-- <script src=""></script> -->
-<script src="js/top.js "></script>
+{{-- <script src="js/top.js "></script> --}}
 
 
 @endsection
