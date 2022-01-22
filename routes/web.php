@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/', 'ItemController@index')->name('item');
 Route::get('/item/create', 'ItemController@create')->name('create');
@@ -25,4 +25,33 @@ Route::get('/item/edit{id}', 'ItemController@edit')->name('edit');
 Route::post('/item/update', 'ItemController@update')->name('update');
 Route::get('/item/destroy/{id}', 'ItemController@destroy');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home')
+
+
+// ユーザー認証
+Route::namespace('User')->prefix('user')->name('user.')->group(function() {
+    Auth::routes([
+        'register' => true,
+        'reset' => false,
+        'verify' => false
+    ]);
+
+    Route::middleware('auth:user')->group(function() {
+        Route::resource('home', 'HomeController', ['only' => 'index']);
+    });
+
+});
+
+// 管理者認証
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
+    Auth::routes([
+        'register' => true,
+        'reset' => false,
+        'verify' => false
+    ]);
+
+    Route::middleware('auth:admin')->group(function () {
+        Route::resource('home', 'HomeController', ['only' => 'index']);
+    });
+
+});
