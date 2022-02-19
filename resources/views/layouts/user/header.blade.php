@@ -1,3 +1,4 @@
+
 <section class="header-top-section">
 	<div class="container">
         <div class="row">
@@ -10,34 +11,32 @@
                     </ul>
                 </div>
             </div>
-            <div  class="col-md-6">
+            <div class="col-md-6">
                 <div class="header-top-menu">
                     <ul class="nav nav-pills navbar-right">
                         <li><a href='#'>My Account</a></li>
                         <li><a href="#">Cart</a></li>
                         @guest
-                            <li>
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('user.login') }}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
+                            @if (Route::has('user.register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('user.register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->user_name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('user.logout') }}"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
