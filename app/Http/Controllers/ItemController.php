@@ -14,7 +14,8 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
-        return view('item.index');
+        // return view('item.index');
+        return view('user.item.list'); //他のコントローラ作るの面倒だったので、
     }
 
     /**

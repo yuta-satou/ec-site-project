@@ -15,12 +15,16 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> --}}
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
+<<<<<<< Updated upstream
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -72,9 +76,17 @@
             </div>
         </nav>
 
+=======
+        <header>
+            @include('layouts.header')
+        </header>
+>>>>>>> Stashed changes
         <main class="py-4">
             @yield('content')
         </main>
+        <footer>
+            @include('layouts.footer')
+        </footer>
     </div>
 </body>
 </html>
